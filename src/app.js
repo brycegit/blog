@@ -4,7 +4,7 @@ var links = [
 ]
 
 //TO DO
-//bring in links via json
+//bring in links via json - set up json file;
 //separate html/css
 var NavComponent = React.createClass({
   propTypes : {
@@ -34,6 +34,7 @@ var NavComponent = React.createClass({
 //TO DO
 //add proptypes
 //pull in blog copy via json
+//dynamic 50%/100%/33% etc.
 var ListingComponent = React.createClass({
   // propTypes : {
   //   title : React.PropTypes.string,
@@ -58,10 +59,25 @@ var ListingComponent = React.createClass({
   }
 });
 
+var FooterComponent = React.createClass({
+  render : function(){
+    return (
+      <div className="row">
+        <div className="box-100">
+          <footer>
+          <p>no rights reserved - do whatever you want with this content</p>
+          </footer>
+        </div>
+      </div>
+  );
+  }
+  });
+
 ReactDOM.render(
   <div>
   <NavComponent />
   <ListingComponent />
+  <FooterComponent />
   </div>,
   document.getElementById('app')
 );
