@@ -122,7 +122,6 @@
       border-bottom: 3px solid transparent;
       transition: all .3s ease;
       &:hover{
-        // background: $button-bg-color-1;
         border-bottom: 3px solid $color-1;
       }
     }
@@ -137,9 +136,6 @@
   //global styles
     .hero_h1{
       margin-bottom: 0;
-    }
-    .nav_links-active{
-      border-bottom: 3px solid $color-1;
     }
   //color-bg
     .colorBg{
@@ -158,6 +154,9 @@
   nav{
     border-bottom: 1px solid $color-3;
     margin-bottom: $s-margin !important;
+    .nav_links-active{
+      border-bottom: 3px solid $color-1;
+    }//TO DO add style for highlighted cats and cat links
     .nav_logo{
       // float: left;
       // display: block;

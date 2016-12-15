@@ -1,4 +1,25 @@
-[
-  {"title": "blog", "link": "/"},
-  {"title": "about", "link": "/about"}
-]
+{
+  "posts":
+  [
+    {
+      "title": "Hello World",
+      "link": "/hello-world",
+      "category": "project management",
+      "content": "I’ve finally started a blog! For those that don’t know me, my name is Bryce and I have worked in the digital marketing space for the last 6 years. I’ve spent the majority of this time as a web project manager..."
+    },
+    {
+      "title": "Git",
+      "link": "/git",
+      "category": "development",
+      "content": "<p>is this a neat paragraph? Could ya tell me now? is this a neat paragraph? Could ya tell me now? is this a neat paragraph? Could ya tell me now?</p>"
+    }
+  ],
+  "about":
+    {
+      "content" : "<p>This is the about page -- I REALLY hope you like it so much! I made it because I LOVE treats and snacks.</p>"
+    },
+  "contact":
+    {
+      "content" : "<p>This is the contact page -- I REALLY hope you like it so much! I made it because I LOVE treats and snacks.</p>"
+    }
+}
