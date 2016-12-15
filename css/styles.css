@@ -120,46 +120,27 @@ h3, h4, h5 {
 
 p {
   line-height: 1.8em;
-  margin: 0 auto 4.2358% auto;
+  padding: 0 0 1em 0;
+  margin: 0 auto;
   text-align: justify;
   max-width: 600px; }
 
 a {
   color: #2d2d2d;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
-.row, .row_group-first, .row_group-middle, .row_group-last {
+.row {
   width: 100%;
   margin: 0 auto;
   padding: 2.61792em 4.2358%; }
-  .row:after, .row_group-first:after, .row_group-middle:after, .row_group-last:after {
+  .row:after {
     content: "";
     display: table;
     clear: both; }
-  .row > div:first-of-type, .row_group-first > div:first-of-type, .row_group-middle > div:first-of-type, .row_group-last > div:first-of-type {
-    margin-left: 0; }
-  .row > div:last-of-type, .row_group-first > div:last-of-type, .row_group-middle > div:last-of-type, .row_group-last > div:last-of-type {
-    margin-right: 0;
-    float: right; }
-
-.row_group-first {
-  padding-bottom: 0; }
-  .row_group-first div {
-    padding-bottom: 2.61792em; }
-
-.row_group-middle {
-  padding-top: 0;
-  padding-bottom: 0; }
-  .row_group-middle div {
-    padding-bottom: 2.61792em; }
-
-.row_group-last {
-  padding-top: 0; }
-  .row_group-last div {
-    padding-bottom: 2.61792em; }
 
 .box-33 {
-  width: 27.6856%;
+  width: 24.86173%;
   margin: 0 4.2358%;
   float: left;
   overflow: hidden;
@@ -174,7 +155,7 @@ a {
       margin-right: 0; } }
 
 .box-66 {
-  width: 62.43087%;
+  width: 58.19506%;
   margin: 0 4.2358%;
   float: left;
   overflow: hidden;
@@ -189,7 +170,7 @@ a {
       margin-right: 0; } }
 
 .box-50 {
-  width: 45.7642%;
+  width: 41.5284%;
   margin: 0 4.2358%;
   float: left;
   overflow: hidden;
@@ -204,7 +185,7 @@ a {
       margin-right: 0; } }
 
 .box-25 {
-  width: 18.6463%;
+  width: 16.5284%;
   margin: 0 4.2358%;
   float: left;
   overflow: hidden;
@@ -219,7 +200,7 @@ a {
       margin-right: 0; } }
 
 .box-100 {
-  width: 100%;
+  width: 91.5284%;
   margin: 0 4.2358%;
   float: left;
   overflow: hidden;
@@ -249,9 +230,6 @@ li a, p a {
 .hero_h1 {
   margin-bottom: 0; }
 
-.nav_links-active {
-  border-bottom: 3px solid #5897C4; }
-
 .colorBg {
   background-color: #5897C4; }
   .colorBg a, .colorBg p, .colorBg h1, .colorBg h2, .colorBg h3, .colorBg h4, .colorBg .button, .colorBg .nav_logo, .colorBg .nav_sublogo {
@@ -262,6 +240,8 @@ li a, p a {
 nav {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 1.618% !important; }
+  nav .nav_links-active {
+    border-bottom: 3px solid #5897C4; }
   nav .nav_logo {
     font-weight: 300;
     margin: 0px auto;
@@ -287,12 +267,10 @@ nav {
 
 .button {
   padding: 0.5em;
-  margin: 1.618% 0 6.85353% 0;
+  margin: 0.5em 0 2.61792em 0;
   font-weight: 400;
   display: inline-block;
   border: 1px solid #2d2d2d; }
-  .box-100 .button {
-    margin: 4.2358%; }
 
 footer p {
   margin-bottom: 0;
