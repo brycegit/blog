@@ -133,7 +133,7 @@ a {
 .row {
   width: 100%;
   margin: 0 auto;
-  padding: 1em 4.2358%; }
+  padding: 2.61792em 4.2358%; }
   .row:after {
     content: "";
     display: table;
@@ -145,7 +145,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1em; }
+  padding-bottom: 2.61792em; }
   @media screen and (max-width: 500px) {
     .box-33 {
       display: inline-block;
@@ -160,7 +160,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1em; }
+  padding-bottom: 2.61792em; }
   @media screen and (max-width: 500px) {
     .box-66 {
       display: inline-block;
@@ -175,7 +175,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1em; }
+  padding-bottom: 2.61792em; }
   @media screen and (max-width: 500px) {
     .box-50 {
       display: inline-block;
@@ -190,7 +190,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1em; }
+  padding-bottom: 2.61792em; }
   @media screen and (max-width: 500px) {
     .box-25 {
       display: inline-block;
@@ -205,7 +205,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1em;
+  padding-bottom: 2.61792em;
   text-align: center; }
   @media screen and (max-width: 500px) {
     .box-100 {
