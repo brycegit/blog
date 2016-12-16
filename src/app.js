@@ -107,15 +107,15 @@ var Nav = React.createClass({
   },
   render(){
     var title = this.props.logo;
+    var links = this.props.links.map((link, i) => {
+      return <li key={i}><a onClick={this.props.pageClick} className={this.props.page == link ? "nav_links-active" : null}>{link}</a></li>
+    });
     var categories = this.props.categories.map((cat, i) => {
       if(this.props.categories.indexOf(cat) == this.props.categories.length - 1){
         return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "nav_links-active" : null}>{cat}</span></a>
       }else{
         return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "nav_links-active" : null}>{cat}</span>, </a>
       }
-    });
-    var links = this.props.links.map((link, i) => {
-      return <li key={i}><a onClick={this.props.pageClick} className={this.props.page == link ? "nav_links-active" : null}>{link}</a></li>
     });
     return (
       <nav className="row">
@@ -178,12 +178,10 @@ var Landing = React.createClass({
 var Footer = React.createClass({
   render(){
     return (
-      <div className="row">
-        <div className="box-100">
-          <footer>
-          <p>no rights reserved - do whatever you want with this content</p>
-          </footer>
-        </div>
+      <div className="row border-top">
+        <footer>
+        <p>no rights reserved - do whatever you want with this content</p>
+        </footer>
       </div>
     )
   }

@@ -45,7 +45,7 @@
     h1,h2,h3,h4,h5{
       line-height: 1.2em;
       font-weight: 300;
-      margin: 0 0 $m-margin 0;
+      padding: 0 0 $s-padding 0;
       text-transform: capitalize;
     }
     h2{
@@ -72,7 +72,7 @@
   // rows
     .row{
       @include row;
-      padding: $m-padding $m-margin;
+      padding: $s-padding $m-margin;
     }
     // ROW GROUPS USE OLD BOX MIXIN CALC
     // .row_group-first{
@@ -141,6 +141,9 @@
     .hero_h1{
       margin-bottom: 0;
     }
+    .border-top{
+      border-top: 1px solid $color-3;
+    }
   //color-bg
     .colorBg{
       background-color: $color-1;
@@ -171,12 +174,15 @@
     }
     .nav_sublogo{
       color: $color-2;
+      a{
+        color: $color-2;
+      }
       display: block;
       font-style: italic;
       font-family: 'Quattrocento';
       font-weight: 400;
       font-size: 70%;
-      padding: $s-margin;
+      margin: $s-margin;
       @media screen and (max-width: $tablet-breakpoint) {
         line-height: 1.8em;
       }
@@ -196,14 +202,14 @@
   }
   .button{
     padding: $s-padding/2;
-    margin: $s-padding/2 0 $m-padding 0;
+    margin: $s-padding 0 $m-padding 0;
     font-weight: 400;
     display: inline-block;
     border: 1px solid $font-color-1;
   }
   footer{
     p{
-      margin-bottom: 0;
+      padding-bottom: 0;
       text-align: center;
     }
   }

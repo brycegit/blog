@@ -107,7 +107,7 @@ body, h1 {
 h1, h2, h3, h4, h5 {
   line-height: 1.2em;
   font-weight: 300;
-  margin: 0 0 4.2358% 0;
+  padding: 0 0 1em 0;
   text-transform: capitalize; }
 
 h2 {
@@ -133,7 +133,7 @@ a {
 .row {
   width: 100%;
   margin: 0 auto;
-  padding: 2.61792em 4.2358%; }
+  padding: 1em 4.2358%; }
   .row:after {
     content: "";
     display: table;
@@ -230,6 +230,9 @@ li a, p a {
 .hero_h1 {
   margin-bottom: 0; }
 
+.border-top {
+  border-top: 1px solid #e0e0e0; }
+
 .colorBg {
   background-color: #5897C4; }
   .colorBg a, .colorBg p, .colorBg h1, .colorBg h2, .colorBg h3, .colorBg h4, .colorBg .button, .colorBg .nav_logo, .colorBg .nav_sublogo {
@@ -253,7 +256,9 @@ nav {
     font-family: 'Quattrocento';
     font-weight: 400;
     font-size: 70%;
-    padding: 1.618%; }
+    margin: 1.618%; }
+    nav .nav_sublogo a {
+      color: #868686; }
     @media screen and (max-width: 900px) {
       nav .nav_sublogo {
         line-height: 1.8em; } }
@@ -267,13 +272,13 @@ nav {
 
 .button {
   padding: 0.5em;
-  margin: 0.5em 0 2.61792em 0;
+  margin: 1em 0 2.61792em 0;
   font-weight: 400;
   display: inline-block;
   border: 1px solid #2d2d2d; }
 
 footer p {
-  margin-bottom: 0;
+  padding-bottom: 0;
   text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
