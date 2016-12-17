@@ -1,14 +1,11 @@
 var App = React.createClass({
   getInitialState(){
-    return {data : "loading...", page: "posts", category: "All", blogPost: null}
-  },
-  componentDidMount(){
-    this.loadData();
-  },
-  componentDidUpdate() {
-    ReactDOM.findDOMNode(this).scrollIntoView()
+    return {data : null, page: "posts", category: "All", blogPost: null}
   },
   loadData(){
+
+  },
+  componentWillMount(){
     if(self.fetch){
       fetch('../build/data.json')
         .then(response => {
@@ -25,6 +22,14 @@ var App = React.createClass({
     }else{
       // TO DO: add xhttp req
     }
+    let links = [];
+    for(var page in this.state.data){
+      links.push(page);
+    }
+    this.linkss = links;
+  },
+  componentDidUpdate() {
+    ReactDOM.findDOMNode(this).scrollIntoView();
   },
   displayHome(event){
     this.setState({page : "posts", blogPost: null, category: "All"});
@@ -119,14 +124,13 @@ var Nav = React.createClass({
     });
     return (
       <nav className="row">
-        <div className="box-100">
-            <div className="nav_logo"><a onClick={this.props.home}>{title}</a> :<span className="nav_sublogo">[{categories}]</span></div>
+            <div className="nav_logo"><h1 className={"hero_h1"}><a onClick={this.props.home}> {title} : </a></h1><span className="nav_sublogo"><p>[ {categories} ]</p></span></div>
           <div className="nav_links">
             <ul>
               {links}
             </ul>
           </div>
-        </div>
+
       </nav>
     )
   }
