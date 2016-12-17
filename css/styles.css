@@ -65,53 +65,53 @@ p, li, button, .button, label, table {
   font-size: calc(1em + 0.5vw); }
 
 h4 {
-  font-size: 0.5em;
-  font-size: calc(0.5em + 0.5vw); }
+  font-size: 0.6em;
+  font-size: calc(0.6em + 0.5vw); }
 
 h3 {
-  font-size: 0.809em;
-  font-size: calc(0.809em + 0.5vw); }
+  font-size: 0.9708em;
+  font-size: calc(0.9708em + 0.5vw); }
 
 h2 {
-  font-size: 1.30896em;
-  font-size: calc(1.30896em + 0.5vw); }
+  font-size: 1.57075em;
+  font-size: calc(1.57075em + 0.5vw); }
 
 h1 {
-  font-size: 2.1179em;
-  font-size: calc(2.1179em + 0.5vw); }
+  font-size: 2.54148em;
+  font-size: calc(2.54148em + 0.5vw); }
 
 .hero_h1 {
-  font-size: 3.42676em;
-  font-size: calc(3.42676em + 0.5vw); }
+  font-size: 4.11212em;
+  font-size: calc(4.11212em + 0.5vw); }
 
 @media screen and (max-width: 500px) {
   h4 {
-    font-size: 0.5em;
-    font-size: calc(0.5em + 0.5vw); }
+    font-size: 0.6em;
+    font-size: calc(0.6em + 0.5vw); }
 
   h3 {
-    font-size: 0.759em;
-    font-size: calc(0.759em + 0.5vw); }
+    font-size: 0.9108em;
+    font-size: calc(0.9108em + 0.5vw); }
 
   h2 {
-    font-size: 1.15216em;
-    font-size: calc(1.15216em + 0.5vw); }
+    font-size: 1.38259em;
+    font-size: calc(1.38259em + 0.5vw); }
 
   h1 {
-    font-size: 1.74898em;
-    font-size: calc(1.74898em + 0.5vw); }
+    font-size: 2.09878em;
+    font-size: calc(2.09878em + 0.5vw); }
 
   .hero_h1 {
-    font-size: 2.65495em;
-    font-size: calc(2.65495em + 0.5vw); } }
+    font-size: 3.18595em;
+    font-size: calc(3.18595em + 0.5vw); } }
 body {
   font-family: 'Quattrocento', serif;
   text-align: center; }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 400;
+  font-weight: 300;
   text-transform: capitalize;
-  padding: 1rem 0 2.61792rem 0;
+  padding: 0 0 2.61792rem 0;
   font-family: 'Oswald', sans-serif; }
 
 h2 {
@@ -119,7 +119,7 @@ h2 {
 
 p {
   line-height: 1.8em;
-  padding: 0 0 1rem 0;
+  padding: 0 0 1.618rem 0;
   margin: 0 auto;
   text-align: justify;
   max-width: 600px; }
@@ -159,7 +159,7 @@ a {
   float: left;
   overflow: hidden;
   min-height: 1px;
-  padding-bottom: 1rem;
+  padding-bottom: 2.61792rem;
   text-align: center; }
   @media screen and (max-width: 500px) {
     .box-100 {
@@ -169,11 +169,23 @@ a {
       margin-left: 0;
       margin-right: 0; } }
 
-li a, p a {
+li a {
   border-bottom: 3px solid transparent;
   transition: all .3s ease; }
-  li a:hover, p a:hover {
+  li a:hover {
     border-bottom: 3px solid #5897C4; }
+
+.nav_links-active {
+  border-bottom: 3px solid #5897C4; }
+
+p a span {
+  background-color: transparent;
+  transition: all .3s ease; }
+  p a span:hover {
+    background-color: #dce9f3; }
+
+.cat_links-active {
+  background-color: #dce9f3; }
 
 .button:hover {
   border: 1px solid #5897C4;
@@ -193,23 +205,20 @@ li a, p a {
 
 nav {
   border-bottom: 1px solid #e9e9e9; }
-  nav .nav_links-active {
-    border-bottom: 3px solid #5897C4; }
   nav .hero_h1 {
     font-weight: 400;
     padding: 0;
     text-transform: lowercase;
-    line-height: 1em; }
+    line-height: 1em;
+    font-family: 'Oswald', sans-serif; }
   nav .nav_logo {
     font-weight: 300;
     margin: 0px auto; }
   nav .nav_sublogo {
     display: block;
-    margin: 6.85353%;
+    padding: 1.618rem;
     font-family: 'Quattrocento';
-    font-weight: 500;
-    font-style: italic;
-    display: inline; }
+    font-weight: 500; }
     nav .nav_sublogo p {
       text-align: center;
       padding: 0; }
@@ -217,7 +226,7 @@ nav {
     display: block;
     border-top: 1px solid #e9e9e9;
     font-family: 'Oswald', sans-serif;
-    padding-top: 2.61792rem;
+    padding-top: 1.618rem;
     font-weight: 300;
     font-size: 1.25em;
     margin: 0px auto;
@@ -229,7 +238,7 @@ nav {
 
 .button {
   padding: 0.5rem;
-  margin: 1rem 0 2.61792rem 0;
+  margin: 1% 0 1% 0;
   font-weight: 400;
   display: inline-block;
   border: 1px solid #363636; }

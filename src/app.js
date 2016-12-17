@@ -2,9 +2,6 @@ var App = React.createClass({
   getInitialState(){
     return {data : null, page: "posts", category: "All", blogPost: null}
   },
-  loadData(){
-
-  },
   componentWillMount(){
     if(self.fetch){
       fetch('../build/data.json')
@@ -85,8 +82,9 @@ var App = React.createClass({
       return (
         <div>
         <Nav home={this.displayHome} pageClick={this.changePage} categoryClick={this.displayCategory}logo="bryce dooley" links={links} categories={categories} page={this.state.page} category={this.state.category}/>
-        <Landing title={this.state.blogPost} content={currentPost.content}/>
+        <Landing title={this.state.blogPost} content={currentPost.content}>
         <a className="button" onClick={this.displayHome}>View All Posts</a>
+        </Landing>
         <Footer/>
         </div>
       )
@@ -117,14 +115,14 @@ var Nav = React.createClass({
     });
     var categories = this.props.categories.map((cat, i) => {
       if(this.props.categories.indexOf(cat) == this.props.categories.length - 1){
-        return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "nav_links-active" : null}>{cat}</span></a>
+        return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "cat_links-active" : null}>{cat}</span></a>
       }else{
-        return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "nav_links-active" : null}>{cat}</span>, </a>
+        return <a key={i}><span onClick={this.props.categoryClick} className={this.props.category == cat ? "cat_links-active" : null}>{cat}</span>, </a>
       }
     });
     return (
       <nav className="row">
-            <div className="nav_logo"><h1 className={"hero_h1"}><a onClick={this.props.home}> {title} : </a></h1><span className="nav_sublogo"><p>[ {categories} ]</p></span></div>
+            <div className="nav_logo"><div className={"hero_h1"}><a onClick={this.props.home}> {title} : </a></div><span className="nav_sublogo"><p>[ {categories} ]</p></span></div>
           <div className="nav_links">
             <ul>
               {links}
@@ -173,6 +171,7 @@ var Landing = React.createClass({
         <div className="box-100">
           <h1>{this.props.title}</h1>
           <div dangerouslySetInnerHTML={ {__html: this.props.content} }></div>
+          {this.props.children}
         </div>
       </div>
     )

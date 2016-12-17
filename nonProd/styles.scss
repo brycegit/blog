@@ -8,7 +8,7 @@
   // font em values
     $nav-em-value: 1em;
     $em-value: 85%; //sets global em value
-    $h-em-value: .5em;
+    $h-em-value: .6em;
   // view width multiplier for fonts only
     $vw_multiplier: .5vw;
   // breakpoints
@@ -22,19 +22,19 @@
     $font-color-1: #363636;
     $font-color-2: #fff;
     $color-1: #5897C4;
-    $color-2: lighten($font-color-1, 35%);
+    $color-2: lighten($color-1, 35%);
     $color-3: lighten($font-color-1, 70%);
     $bg-color-1: $font-color-2;
     $bg-color-2: $font-color-1;
     $button-bg-color-1: $color-2;
     $button-txt-color-1: $font-color-2;
   // margin for boxes and rows - %
-    $l-margin: ($xl*$mult) * 1%;
-    $m-margin: ($l*$mult) * 1%;
+    $l-margin: ($xl*2) * 1%;
+    $m-margin: ($xl) * 1%;
     $s-margin: $s * 1%;
   // padding for boxes and rows - em
-    $l-padding: ($xl) * 2rem;
-    $m-padding: ($l) * 1rem;
+    $l-padding: ($l) * 1rem;
+    $m-padding: ($m) * 1rem;
     $s-padding: $s * 1rem;
   // font settings
     @import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Quattrocento:400,700');
@@ -43,9 +43,9 @@
       text-align: center;
     }
     h1,h2,h3,h4,h5{
-      font-weight: 400;
+      font-weight: 300;
       text-transform: capitalize;;
-      padding: $s-padding 0 $m-padding 0;
+      padding: 0 0 $l-padding 0;
       font-family: 'Oswald', sans-serif;
     }
     h2{
@@ -53,7 +53,7 @@
     }
     p{
       line-height: 1.8em;
-      padding: 0 0 $s-padding 0;
+      padding: 0 0 $m-padding 0;
       margin: 0 auto;
       text-align: justify;
       max-width: 600px;
@@ -67,7 +67,7 @@
   // rows
     .row{
       @include row;
-      padding: $m-padding $m-margin;
+      padding: $l-padding $m-margin;
     }
     // ROW GROUPS USE OLD BOX MIXIN CALC
     // .row_group-first{
@@ -104,7 +104,7 @@
     // }
     .box-50{
       @include box($m-margin, (1 / 2) * 100%, 2);
-      padding-bottom: $m-padding;
+      padding-bottom: $l-padding;
     }
     // .box-25{
     //   @include box($m-margin, (1 / 4) * 100%, 4);
@@ -112,17 +112,30 @@
     // }
     .box-100{
       @include box($m-margin, 100%, 1);
-      padding-bottom: $s-padding;
+      padding-bottom: $l-padding;
       text-align: center;
     }
 // THEMES ------------------------------------
   //global animations
-    li a, p a{
+    li a,{
       border-bottom: 3px solid transparent;
       transition: all .3s ease;
       &:hover{
         border-bottom: 3px solid $color-1;
       }
+    }
+    .nav_links-active{
+      border-bottom: 3px solid $color-1;
+    }
+    p a span,{
+      background-color: transparent;
+      transition: all .3s ease;
+      &:hover{
+        background-color: $color-2;
+      }
+    }
+    .cat_links-active{
+      background-color: $color-2;
     }
     .button{
       &:hover{
@@ -152,15 +165,13 @@
   //nav
   nav{
     border-bottom: 1px solid $color-3;
-    .nav_links-active{
-      border-bottom: 3px solid $color-1;
-    }//TO DO add style for highlighted cats and cat links
     .hero_h1{
       font-weight: 400;
       padding: 0;
       // margin: 0 0 $s-margin 0;
       text-transform: lowercase;
       line-height: 1em;
+      font-family: 'Oswald', sans-serif;
     }
     .nav_logo{
       // float: left;
@@ -175,11 +186,10 @@
       //   color: $color-2;
       // }
       display: block;
-      margin: $l-margin;
+      padding: $m-padding;
       font-family: 'Quattrocento';
       font-weight: 500;
-      font-style: italic;
-      display: inline;
+      // font-style: italic;
       p{
         text-align: center;
         padding: 0;
@@ -206,7 +216,7 @@
   }
   .button{
     padding: $s-padding/2;
-    margin: $s-padding 0 $m-padding 0;
+    margin: $s-margin 0 $s-margin 0;
     font-weight: 400;
     display: inline-block;
     border: 1px solid $font-color-1;
